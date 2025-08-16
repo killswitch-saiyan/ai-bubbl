@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6;
+  }
+  
+  .comic-bubble {
+    @apply bg-white border-2 border-gray-800 rounded-full px-4 py-2 relative shadow-lg;
+  }
+  
+  .comic-bubble-thought {
+    @apply bg-white border-2 border-gray-800 rounded-lg px-4 py-2 relative shadow-lg;
+    border-radius: 60% 60% 60% 60% / 70% 70% 40% 40%;
+  }
+  
+  .comic-bubble-narration {
+    @apply bg-yellow-100 border-2 border-gray-800 px-4 py-2 relative shadow-lg;
+  }
+  
+  .comic-bubble-sound {
+    @apply bg-comic-yellow border-2 border-gray-800 px-4 py-2 relative shadow-lg transform rotate-1;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
